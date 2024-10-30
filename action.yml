@@ -30,7 +30,13 @@ inputs:
     required: false
   base_registry:
     description: Base path to the OCI registry where to find library/docker:20.10
-    default: docker.io/docker:20.10
+    default: docker.io
+  base_registry_username:
+    description:  Username for the Base path to the OCI registry where to find library/docker:20.10
+    default: docker.io
+  base_registry_password:
+    description: Password  for the Base path to the OCI registry where to find library/docker:20.10
+    default: docker.io
 runs:
   using: 'docker'
   image: 'Dockerfile'
