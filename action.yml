@@ -28,6 +28,9 @@ inputs:
     description: 'Docker Network ID'
     default: ${{ job.container.network }}
     required: false
+  base_registry:
+    description: Base path to the OCI registry where to find library/docker:20.10
+    default: docker.io/docker:20.10
 runs:
   using: 'docker'
   image: 'Dockerfile'
