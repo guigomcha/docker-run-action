@@ -30,5 +30,5 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  # image: 'Dockerfile'
-  image: 'docker://registry.gitlab.com/ari-sns-registries/pub-registries/library/action-in-docker:latest'
+  image: 'Dockerfile'
+  # image: 'docker://registry.gitlab.com/ari-sns-registries/pub-registries/library/action-in-docker:latest'
