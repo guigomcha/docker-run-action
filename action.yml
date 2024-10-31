@@ -1,5 +1,5 @@
 # action.yml
-name: 'Docker Run Action With Custom Base Image'
+name: 'Docker Run Action Avoid DockerHub Limit Pull Rate'
 description: 'Run a command in a new container'
 inputs:
   image:
@@ -28,15 +28,7 @@ inputs:
     description: 'Docker Network ID'
     default: ${{ job.container.network }}
     required: false
-  base_registry:
-    description: Base path to the OCI registry where to find library/docker:20.10
-    default: docker.io
-  base_registry_username:
-    description:  Username for the Base path to the OCI registry where to find library/docker:20.10
-    default: docker.io
-  base_registry_password:
-    description: Password  for the Base path to the OCI registry where to find library/docker:20.10
-    default: docker.io
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  # image: 'Dockerfile'
+  image: 'docker://registry.gitlab.com/ari-sns-registries/pub-registries/library/action-in-docker:latest'
